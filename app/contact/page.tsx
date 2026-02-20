@@ -80,9 +80,12 @@ export default function ContactPage() {
                       <h3 className="text-slate-900 font-semibold mb-1">
                         Phone
                       </h3>
-                      <p className="text-slate-600 text-sm">
-                        Contact us via email for phone inquiries
-                      </p>
+                      <a
+                        href="tel:2142336405"
+                        className="text-slate-600 text-sm hover:text-primary transition-colors"
+                      >
+                        (214) 233-6405
+                      </a>
                     </div>
                   </div>
                 </div>
