@@ -154,22 +154,22 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Tamara Olsen */}
+              {/* Tamara Olson */}
               <div className="flex flex-col items-center">
                 <div className="w-64 h-64 rounded-full overflow-hidden mb-6">
                   <Image
-                    src="/images/tamaraolsen.webp"
-                    alt="Tamara Olsen - Acting Instructor at Playhouse West Dallas"
+                    src="/images/tamaraolson.webp"
+                    alt="Tamara Olson - Acting Instructor at Playhouse West Dallas"
                     width={256}
                     height={256}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <h3 className="font-serif text-foreground text-xl md:text-2xl mb-4">
-                  Tamara Olsen
+                  Tamara Olson
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
-                  Tamara Olsen is an actress, writer and director. She studied
+                  Tamara Olson is an actress, writer and director. She studied
                   the Meisner technique at Playhouse West Los Angeles under the
                   tutelage of acclaimed teacher and Playhouse West Founder
                   Robert Carnegie for 6 years. She had the opportunity to

@@ -45,7 +45,7 @@ export default function AuditPage() {
                 and the way the class is conducted in a serious, professional
                 atmosphere. Immediately following the audit class there will be
                 a brief interview with{" "}
-                <strong className="text-primary">Tamara Olsen</strong> and/or{" "}
+                <strong className="text-primary">Tamara Olson</strong> and/or{" "}
                 <strong className="text-primary">Ric Maddox</strong> (Directors
                 of Playhouse West Dallas).
               </p>
