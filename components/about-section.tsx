@@ -27,7 +27,7 @@ export function AboutSection() {
                   href="https://www.playhousewest.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-accent transition-colors font-semibold"
+                  className="text-primary hover:text-accent transition-colors underline font-semibold"
                 >
                   Los Angeles
                 </a>
