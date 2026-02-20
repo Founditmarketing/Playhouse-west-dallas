@@ -192,7 +192,7 @@ export default function ClassesPage() {
                 </h3>
                 <div className="space-y-4 text-slate-700 leading-relaxed text-sm md:text-base">
                   <p>
-                    We break for all major holidays and two weeks off at Christmas. Every student must pay for December/January to maintain enrollment, regardless of these breaks.
+                    We take 2 weeks during the July 4th holiday and 2 weeks at Christmas, as well as breaking for all other major holidays. Every student must pay for December/January to maintain enrollment, regardless of these breaks.
                   </p>
                   <p>
                     Our rates are intentionally reasonable to ensure high-quality training remains accessible, and we expect students to honor their financial obligations to the school.
