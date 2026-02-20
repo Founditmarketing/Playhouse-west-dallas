@@ -108,8 +108,7 @@ export function HeroSection() {
         <div className="flex items-center justify-center w-full lg:w-1/2 bg-primary px-8 py-12 lg:py-20">
           <div className="max-w-lg text-center lg:text-center">
             <h1 className="font-serif text-primary-foreground text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider leading-relaxed text-balance">
-              Meisner Acting Classes and Acting Training at the Playhouse West
-              Dallas
+              Authentic Meisner training and repertory theater company at Playhouse West Dallas
             </h1>
           </div>
         </div>
