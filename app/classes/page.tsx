@@ -82,9 +82,6 @@ export default function ClassesPage() {
                 </h3>
                 <div className="text-slate-700 text-sm md:text-base leading-relaxed space-y-4">
                   <p>
-                    Please choose which days you want your two classes.
-                  </p>
-                  <p>
                     Tuition is a flat monthly rate enabling focused, continuous development. Promotion remains at the discretion of the teacher.
                   </p>
                 </div>
@@ -112,12 +109,12 @@ export default function ClassesPage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-baseline border-b border-zinc-50 pb-2">
-                    <span className="text-slate-900 font-bold text-2xl font-serif text-primary">$200</span>
+                    <span className="text-slate-900 font-bold text-2xl font-serif text-primary">$250</span>
                     <span className="text-xs text-slate-500 uppercase tracking-widest">per month</span>
                   </div>
                   <ul className="text-slate-700 text-sm space-y-2">
-                    <li>• Cash/Check: $200/month</li>
-                    <li>• Venmo: $205/month</li>
+                    <li>• Cash/Check: $250/month</li>
+                    <li>• Venmo: $255/month</li>
                     <li>• New students: One-time pro-rate available</li>
                   </ul>
                 </div>
