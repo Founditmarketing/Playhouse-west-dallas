@@ -4,7 +4,9 @@ import { useState } from "react"
 import { Header } from "@/components/header"
 import { PageBanner } from "@/components/page-banner"
 import { Footer } from "@/components/footer"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Loader2 } from "lucide-react"
+import { sendEmailAction } from "@/app/actions/send-email"
+import { toast } from "sonner"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,6 +15,7 @@ export default function ContactPage() {
     subject: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
   function handleChange(
@@ -21,9 +24,24 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    setIsSubmitting(true)
+
+    try {
+      const result = await sendEmailAction(formData)
+
+      if (result.success) {
+        setSubmitted(true)
+        toast.success("Message sent successfully!")
+      } else {
+        toast.error(result.error || "Failed to send message")
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -225,9 +243,17 @@ export default function ContactPage() {
 
                       <button
                         type="submit"
-                        className="bg-primary text-primary-foreground font-serif uppercase tracking-wider text-sm px-8 py-3 hover:bg-accent transition-colors"
+                        disabled={isSubmitting}
+                        className="bg-primary text-primary-foreground font-serif uppercase tracking-wider text-sm px-8 py-3 hover:bg-accent transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center min-w-[160px]"
                       >
-                        Send Message
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          "Send Message"
+                        )}
                       </button>
                     </form>
                   )}
