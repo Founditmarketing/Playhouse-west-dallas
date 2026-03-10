@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Header } from "@/components/header"
+import Script from 'next/script'
 import { PageBanner } from "@/components/page-banner"
 import { Footer } from "@/components/footer"
 import { Mail, MapPin, Phone, Loader2 } from "lucide-react"
@@ -45,10 +46,16 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Script id="fb-viewcontent-contact">
+        {`fbq('track', 'ViewContent');`}
+      </Script>
       <Header />
-      <main>
-        <PageBanner title="Contact Us" />
+      <main className="flex-1">
+        <PageBanner 
+          title="Contact Us" 
+          description="Get in touch with Playhouse West Dallas. We're here to answer your questions and help you start your acting journey."
+        />
 
         <section className="bg-white py-14 md:py-20">
           <div className="max-w-[1160px] mx-auto px-6 lg:px-4">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { Header } from "@/components/header"
+import Script from 'next/script'
 import { PageBanner } from "@/components/page-banner"
 import { Footer } from "@/components/footer"
 
@@ -57,10 +58,15 @@ const alumni = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Script id="fb-viewcontent-about">
+        {`fbq('track', 'ViewContent');`}
+      </Script>
       <Header />
-      <main>
-        <PageBanner title="History of Playhouse West" />
+      <main className="flex-1">
+        <PageBanner 
+          title="About Us"
+          description="Learn about the history and heritage of Playhouse West Dallas." />
 
         {/* History Section */}
         <section className="bg-card py-14 md:py-20">

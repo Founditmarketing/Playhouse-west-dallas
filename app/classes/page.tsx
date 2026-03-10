@@ -4,15 +4,22 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
+import Script from 'next/script'
 import { PageBanner } from "@/components/page-banner"
 import { Footer } from "@/components/footer"
 
 export default function ClassesPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Script id="fb-viewcontent-classes">
+        {`fbq('track', 'ViewContent');`}
+      </Script>
       <Header />
-      <main>
-        <PageBanner title="Tuition & Class Structure" />
+      <main className="flex-1">
+        <PageBanner
+          title="Classes & Tuition"
+          description="Professional Meisner training tailored to your development as an actor."
+        />
 
         {/* Heritage Section - Full Width & Centered */}
         <section className="bg-white py-16 md:py-24">

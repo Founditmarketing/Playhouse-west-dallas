@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
+import Script from 'next/script'
 import { PageBanner } from "@/components/page-banner"
 import { Footer } from "@/components/footer"
 
@@ -13,12 +14,15 @@ export const metadata: Metadata = {
 
 export default function AuditPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Script id="fb-viewcontent-audit">
+        {`fbq('track', 'ViewContent');`}
+      </Script>
       <Header />
-      <main>
+      <main className="flex-1">
         <PageBanner
-          title="Audit Playhouse West - Dallas"
-        />
+          title="Audit A Class"
+          description="Experience Playhouse West Dallas firsthand. Schedule an audit to watch our training in action." />
 
         {/* Content Section */}
         <section className="bg-card py-14 md:py-20">
