@@ -33,7 +33,7 @@ export function FestivalPopup() {
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-w-3xl p-0 overflow-hidden bg-transparent border-none shadow-none">
-        <div className="relative">
+        <div className="relative flex flex-col items-center">
           <Link
             href="https://filmfreeway.com/PlayhouseWestFilmFestival-Dallas-1"
             target="_blank"
@@ -50,6 +50,27 @@ export function FestivalPopup() {
               priority
             />
           </Link>
+          
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-2xl mt-6 px-4">
+            <Link
+              href="https://filmfreeway.com/PlayhouseWestFilmFestival-Dallas-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => handleOpenChange(false)}
+              className="flex-1 bg-zinc-900 text-white text-center px-6 py-4 rounded-xl font-bold text-lg hover:bg-zinc-800 transition-colors shadow-xl border border-zinc-700"
+            >
+              Submit Now
+            </Link>
+            <Link
+              href="https://events.ticketleap.com/events/playhouse-west-dallas"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => handleOpenChange(false)}
+              className="flex-1 bg-red-600 text-white text-center px-6 py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition-colors shadow-xl"
+            >
+              Purchase Tickets
+            </Link>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
