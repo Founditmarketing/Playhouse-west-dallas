@@ -31,7 +31,7 @@ export function AuditForm() {
     setIsSubmitting(true)
 
     try {
-      const message = `Phone: ${formData.phone}\n\nInterested in:\n${formData.interest}\n\nHow did you hear about us?:\n${formData.source || "N/A"}\n\nHow serious are you about acting?:\n${formData.seriousness}\n\nWhat do you know of Playhouse West Dallas and the Meisner method of acting?:\n${formData.knowledge}\n\nIf chosen to audit, will you show up on time and be present?:\n${formData.willShowUp}\n\nAre you ready to commit to a 3 year acting program?:\n${formData.readyToCommit}`
+      const message = `Phone: ${formData.phone}\n\nInterested in:\n${formData.interest}\n\nHow did you hear about us?:\n${formData.source || "N/A"}\n\nHow serious are you about acting?:\n${formData.seriousness}\n\nWhat do you know of Playhouse West Dallas and the Meisner method of acting?:\n${formData.knowledge}\n\nIf chosen to audit, will you show up on time and be present?:\n${formData.willShowUp}\n\nAre you committed to your growth and being consistent as an actor and student?:\n${formData.readyToCommit}`
 
       const result = await sendEmailAction({
         name: formData.name,
@@ -189,7 +189,7 @@ export function AuditForm() {
         </div>
 
         <div className="w-full bg-white border border-muted-foreground/20 px-4 py-3">
-          <p className="text-muted-foreground/80 mb-3">Are you ready to commit to a 3 year acting program?*</p>
+          <p className="text-muted-foreground/80 mb-3">Are you committed to your growth and being consistent as an actor and student?*</p>
           <div className="flex space-x-6">
             {["Yes", "No"].map((option) => (
               <label key={option} className="flex items-center space-x-3 text-foreground cursor-pointer">
