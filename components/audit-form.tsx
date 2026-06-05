@@ -16,6 +16,7 @@ export function AuditForm() {
     knowledge: "",
     willShowUp: "",
     readyToCommit: "",
+    canTrainTwiceAWeek: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -31,7 +32,7 @@ export function AuditForm() {
     setIsSubmitting(true)
 
     try {
-      const message = `Phone: ${formData.phone}\n\nInterested in:\n${formData.interest}\n\nHow did you hear about us?:\n${formData.source || "N/A"}\n\nHow serious are you about acting?:\n${formData.seriousness}\n\nWhat do you know of Playhouse West Dallas and the Meisner method of acting?:\n${formData.knowledge}\n\nIf chosen to audit, will you show up on time and be present?:\n${formData.willShowUp}\n\nAre you committed to your growth and being consistent as an actor and student?:\n${formData.readyToCommit}`
+      const message = `Phone: ${formData.phone}\n\nInterested in:\n${formData.interest}\n\nHow did you hear about us?:\n${formData.source || "N/A"}\n\nHow serious are you about acting?:\n${formData.seriousness}\n\nWhat do you know of Playhouse West Dallas and the Meisner method of acting?:\n${formData.knowledge}\n\nIf chosen to audit, will you show up on time and be present?:\n${formData.willShowUp}\n\nAre you committed to your growth and being consistent as an actor and student?:\n${formData.readyToCommit}\n\nIf selected to audit a class and selected to become a student, would you be able to train twice a week for our Tuesday evening and Saturday mid day class?:\n${formData.canTrainTwiceAWeek}`
 
       const result = await sendEmailAction({
         name: formData.name,
@@ -199,6 +200,26 @@ export function AuditForm() {
                   value={option}
                   required
                   checked={formData.readyToCommit === option}
+                  onChange={handleChange}
+                  className="accent-primary w-4 h-4"
+                />
+                <span>{option}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full bg-white border border-muted-foreground/20 px-4 py-3">
+          <p className="text-muted-foreground/80 mb-3">If selected to audit a class and selected to become a student, would you be able to train twice a week for our Tuesday evening and Saturday mid day class?*</p>
+          <div className="flex space-x-6">
+            {["Yes", "No"].map((option) => (
+              <label key={option} className="flex items-center space-x-3 text-foreground cursor-pointer">
+                <input
+                  type="radio"
+                  name="canTrainTwiceAWeek"
+                  value={option}
+                  required
+                  checked={formData.canTrainTwiceAWeek === option}
                   onChange={handleChange}
                   className="accent-primary w-4 h-4"
                 />
