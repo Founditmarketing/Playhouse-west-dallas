@@ -83,6 +83,10 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
+      
+      {/* Google Analytics */}
+      <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-E5N92BL8WR')` }} />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-E5N92BL8WR" strategy="afterInteractive" />
       </body>
     </html>
   )
