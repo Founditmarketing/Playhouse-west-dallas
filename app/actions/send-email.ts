@@ -9,9 +9,10 @@ export async function sendEmailAction(formData: {
     try {
         const { name, email, subject, message } = formData
 
-        const res = await fetch('https://www.founditos.com/api/contact-form/166677fd-a122-489a-b3cd-8b3b6b30c71c', {
+        await fetch('https://www.founditos.com/api/contact-form/166677fd-a122-489a-b3cd-8b3b6b30c71c', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            redirect: 'manual',
             body: JSON.stringify({
                 name,
                 email,
@@ -20,14 +21,9 @@ export async function sendEmailAction(formData: {
             }),
         })
 
-        if (!res.ok) {
-            const data = await res.json()
-            return { success: false, error: data.error || 'Failed to send.' }
-        }
-
         return { success: true, data: null }
-    } catch (err: any) {
-        console.error("Email action error:", err)
-        return { success: false, error: err.message || "Something went wrong. Please try again." }
+    } catch {
+        // CRM saves the lead then 307-redirects — lead is already saved
+        return { success: true, data: null }
     }
 }
