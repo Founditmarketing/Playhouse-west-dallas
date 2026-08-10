@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "About Us | Playhouse West Dallas",
   description:
     "Learn about the history of Playhouse West, our staff, and our distinguished alumni. Meisner acting training in Dallas, TX.",
+  alternates: {
+    canonical: "https://www.playhousewestdallas.com/about-2",
+  },
 }
 
 const alumni = [

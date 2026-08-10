@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Audit a Class | Playhouse West Dallas",
   description:
     "Audit a Meisner acting class at Playhouse West Dallas. See our training firsthand before enrolling.",
+  alternates: {
+    canonical: "https://www.playhousewestdallas.com/audit-1",
+  },
 }
 
 export default function AuditPage() {

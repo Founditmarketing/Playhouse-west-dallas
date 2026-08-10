@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'Acting Training Classes in Dallas | Playhouse West Dallas',
   description:
     'Learn Meisner acting training with expert teachers at Playhouse West Dallas. Enhance your skills with our professional instructors and start your dream career.',
+  alternates: {
+    canonical: 'https://www.playhousewestdallas.com/',
+  },
   openGraph: {
     title: 'Playhouse West Dallas',
     description:
@@ -30,6 +33,28 @@ export const viewport = {
   themeColor: '#a92527',
 }
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Playhouse West Dallas',
+  url: 'https://www.playhousewestdallas.com',
+  email: 'playhousewestdallas@gmail.com',
+  telephone: '+1-214-233-6405',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '629 N Peak St',
+    addressLocality: 'Dallas',
+    addressRegion: 'TX',
+    postalCode: '75246',
+    addressCountry: 'US',
+  },
+  sameAs: [
+    'https://www.facebook.com/PlayhouseWestDallas',
+    'https://x.com/PlayhouseWest',
+    'https://www.youtube.com/user/PlayhouseWestSchool',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,6 +63,10 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         <Script id="gtm-head" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -41,14 +41,7 @@ export function AboutSection() {
                   Philadelphia
                 </a>{" "}
                 and{" "}
-                <a
-                  href="http://www.playhousewestdallas.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-accent transition-colors underline font-semibold"
-                >
-                  Dallas
-                </a>{" "}
+                <span className="font-semibold">Dallas</span>{" "}
                 founded by Robert Carnegie and Jeff Goldblum. The training at
                 Playhouse West is fully endorsed by Sanford Meisner, chosen by
                 the legendary teacher of acting as the venue for his last decade
