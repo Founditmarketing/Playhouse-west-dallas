@@ -11,6 +11,7 @@ const footerLinks = [
   { label: "About", href: "/about-2" },
   { label: "Audit", href: "/audit-1" },
   { label: "Classes", href: "/classes" },
+  { label: "Film Festival", href: "/film-festival" },
   { label: "Contact", href: "/contact" },
 ]
 
