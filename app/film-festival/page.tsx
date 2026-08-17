@@ -411,40 +411,6 @@ export default function FilmFestivalPage() {
           </div>
         </section>
 
-        {/* Rules & Terms */}
-        <section className="bg-card py-14 md:py-20">
-          <div className="max-w-[900px] mx-auto px-6 lg:px-4">
-            <h2 className="font-serif text-primary text-2xl md:text-4xl uppercase tracking-[0.15em] mb-10 text-center">
-              Rules &amp; Terms
-            </h2>
-
-            <div className="text-slate-700 space-y-6 leading-relaxed text-base lg:text-lg">
-              <h3 className="font-serif text-primary text-xl uppercase tracking-wider">
-                General Requirements
-              </h3>
-
-              <p>
-                We strongly encourage you to review the following carefully. By
-                submitting your project, you acknowledge that you have read and
-                agreed to all of the following rules and terms. We will not be
-                responsible for refunding submission fees when the guidelines
-                are not properly followed. All projects that have been submitted
-                by our final deadline and that adhere to the following terms
-                will be considered for inclusion in the 2026 Playhouse West
-                Dallas Film Festival.
-              </p>
-
-              <ol className="list-decimal pl-6 space-y-3 marker:text-primary marker:font-bold">
-                <li>
-                  <strong className="text-primary uppercase">
-                    All entries must submit a cover letter.
-                  </strong>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </section>
-
         {/* Closing CTA */}
         <section className="bg-zinc-50 py-14 md:py-20">
           <div className="max-w-[800px] mx-auto px-6 lg:px-4 text-center">
