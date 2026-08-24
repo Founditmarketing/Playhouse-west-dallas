@@ -64,8 +64,13 @@ export default function AuditPage() {
                 </h3>
                 <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-4 md:gap-12 text-center">
                   <div>
-                    <p className="text-primary font-bold text-lg">Tuesdays Only</p>
+                    <p className="text-primary font-bold text-lg">Tuesdays</p>
                     <p className="text-slate-700">6:00 PM - 9:00 PM</p>
+                  </div>
+                  <div className="hidden md:block w-px h-10 bg-zinc-200 mt-1"></div>
+                  <div>
+                    <p className="text-primary font-bold text-lg">Saturdays</p>
+                    <p className="text-slate-700">12:00 PM - 3:00 PM</p>
                   </div>
                   <div className="hidden md:block w-px h-10 bg-zinc-200 mt-1"></div>
                   <div>
