@@ -5,7 +5,6 @@ import { AboutSection } from "@/components/about-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { SocialSection } from "@/components/social-section"
 import { Footer } from "@/components/footer"
-import { FestivalPopup } from "@/components/festival-popup"
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       </Script>
       <Header />
       <main>
-        <FestivalPopup />
         <HeroSection />
         <AboutSection />
         <TestimonialsSection />
