@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { PageBanner } from "@/components/page-banner"
 import { Footer } from "@/components/footer"
+import { FESTIVAL_AWARDS, FESTIVAL_TICKETS_URL } from "@/lib/festival"
 
 export const metadata: Metadata = {
   title: "Playhouse West Film Festival Dallas | September 19, 2026",
@@ -18,8 +19,7 @@ export const metadata: Metadata = {
   },
 }
 
-const TICKETS_URL =
-  "https://events.ticketleap.com/tickets/playhouse-west-dallas/playhouse-west-dallas-film-festival"
+const TICKETS_URL = FESTIVAL_TICKETS_URL
 
 const eventSchema = {
   "@context": "https://schema.org",
@@ -59,13 +59,7 @@ const eventSchema = {
   },
 }
 
-const awards = [
-  "Best Picture / Film",
-  "Best Director",
-  "Best Screenplay",
-  "Best Actress & Actor",
-  "Best Supporting Actress & Actor",
-]
+const awards = FESTIVAL_AWARDS
 
 type ScheduleItem = {
   time: string
