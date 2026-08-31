@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Header } from "@/components/header"
 import Script from 'next/script'
 import { PageBanner } from "@/components/page-banner"
@@ -18,16 +18,6 @@ export function ContactClient() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const urlParams = new URLSearchParams(window.location.search)
-      const subject = urlParams.get("subject")
-      if (subject === "scenenight") {
-        setFormData((prev) => ({ ...prev, subject: "scenenight" }))
-      }
-    }
-  }, [])
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -246,9 +236,6 @@ export function ContactClient() {
                           className="w-full bg-white border border-slate-300 text-slate-900 px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
                         >
                           <option value="">Select a topic</option>
-                          <option value="scenenight">
-                            Scene Night RSVP
-                          </option>
                           <option value="enrollment">
                             Class Enrollment
                           </option>

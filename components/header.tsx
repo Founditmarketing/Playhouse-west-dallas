@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -17,63 +17,10 @@ const navLinks = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [isBannerVisible, setIsBannerVisible] = useState(true)
   const pathname = usePathname()
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const dismissed = sessionStorage.getItem("sceneNightBannerDismissed")
-      if (dismissed === "true") {
-        setIsBannerVisible(false)
-      }
-    }
-  }, [])
-
-  const handleDismissBanner = () => {
-    setIsBannerVisible(false)
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem("sceneNightBannerDismissed", "true")
-    }
-  }
 
   return (
     <header className="bg-primary">
-      {/* Global Announcement Bar */}
-      {isBannerVisible && (
-        <div className="bg-zinc-900 text-white w-full relative">
-          <div className="max-w-[1240px] mx-auto px-8 py-3 md:px-4 md:py-3 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6">
-            <p className="text-[13px] sm:text-sm md:text-base font-medium text-center leading-snug">
-              <span className="font-bold text-primary mr-1 md:mr-2 uppercase tracking-wider">Upcoming:</span> 
-              Witness the work firsthand. Sign up for our free event, <a href="#scene-night-spotlight" className="font-bold text-primary underline underline-offset-4 decoration-primary/60 hover:text-white transition-colors cursor-pointer">Scene Night!</a>
-            </p>
-            <div className="flex items-center gap-2 md:gap-3 shrink-0">
-              <a 
-                href="#scene-night-spotlight" 
-                className="bg-transparent border border-white hover:bg-white hover:text-zinc-900 transition-colors text-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-3 py-1.5 md:px-4 md:py-2"
-              >
-                Learn More
-              </a>
-              <a 
-                href="https://events.ticketleap.com/tickets/playhouse-west-dallas/playhouse-west-dallas-scene-night-may-23-2026" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary border border-primary hover:bg-white hover:border-white hover:text-primary transition-colors text-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-3 py-1.5 md:px-5 md:py-2"
-              >
-                RSVP Now
-              </a>
-            </div>
-            
-            <button 
-              onClick={handleDismissBanner}
-              className="absolute bottom-2 right-2 md:bottom-auto md:top-1/2 md:-translate-y-1/2 text-white/60 hover:text-white p-1"
-              aria-label="Close announcement"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      )}
-
       <nav className="relative bg-white border-b border-zinc-200">
         <div className="flex items-center justify-between px-4 py-2 lg:px-8 lg:py-0 w-full">
           {/* Logo */}
